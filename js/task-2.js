@@ -1,13 +1,13 @@
 function makeArray(firstArray, secondArray, maxLength) {
   const numberOfElements = firstArray.length + secondArray.length;
   const newArray = firstArray.concat(secondArray);
-  let result=[];
+  let trimmedArray=[];
   if (numberOfElements < maxLength) {
-    result = newArray.slice(0, numberOfElements);
+    trimmedArray = newArray.slice(0, numberOfElements);
   } else {
-    result = newArray.slice(0, maxLength);
+    trimmedArray = newArray.slice(0, maxLength);
   }
-  return result;
+  return trimmedArray;
 }
 console.log(makeArray(['Mango', 'Poly'], ['Ajax', 'Chelsea'], 3)); // ["Mango", "Poly", "Ajax"]
 console.log(makeArray(['Mango', 'Poly', 'Houston'], ['Ajax', 'Chelsea'], 4)); // ["Mango", "Poly", "Houston", "Ajax"]
